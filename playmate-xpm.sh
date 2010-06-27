@@ -43,6 +43,8 @@ convert $jpg -resize $resize -colors $colors $xpm && {
     fi
     mogrify -crop ${max_width}x${max_height}+${x}+${y} -depth $depth $xpm
 } && \
+    mogrify -family Courier -weight bold -gravity SouthEast \
+    -annotate +5+5 $(basename $jpg) $xpm && \
     gzip -c $xpm > $gz && \
     echo $gz || \
     exit 1

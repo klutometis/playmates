@@ -1,3 +1,7 @@
 # -*- mode: org; -*-
-* TODO notate artifacts
+* DONE notate artifacts
+  CLOSED: [2010-06-27 Sun 08:54]
+  - CLOSING NOTE [2010-06-27 Sun 08:54] \\
+    just filename; sometimes it doesn't show up, though (too dark): a way
+    to specify negative color?
   notate artifact with model and date metadata (possibly just filename?)
