@@ -30,7 +30,7 @@ fi
 
 # crop a random 640x480 section of the image (not necessarily tits or
 # puss!)
-convert $jpg -resize $resize -colors $colors $xpm && {
+convert $jpg -resize $resize $xpm && {
     geometry=$(geometry $xpm)
     width=$(width $geometry)
     height=$(height $geometry)
@@ -41,10 +41,11 @@ convert $jpg -resize $resize -colors $colors $xpm && {
     else
         y=$(( $RANDOM % ($height - $max_height) ))
     fi
-    mogrify -crop ${max_width}x${max_height}+${x}+${y} -depth $depth $xpm
+    mogrify -crop ${max_width}x${max_height}+${x}+${y} $xpm
 } && \
     mogrify -family Courier -weight bold -gravity SouthEast \
     -annotate +5+5 $(basename $jpg) $xpm && \
+    mogrify -colors $colors -depth $depth $xpm && \
     gzip -c $xpm > $gz && \
     echo $gz || \
     exit 1
