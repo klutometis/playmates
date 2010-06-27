@@ -1,8 +1,19 @@
 These scripts make my grub splash screen much more interesting by
 sampling a random Hefnerian artifact at 640x480; but it can be used on
-an arbitrary directory of jpg-artifacts.
+an arbitrary directory of jpg-artifacts:
 
-The idea is that, after the artifact directory (see
-playmate-splash.sh) has been populated (see playmates.sh),
-$(PREFIX)/bin/playmate-splash will be run by sysinit; thus presenting
-a unique splash upon the next boot.
+  1. populate an artifact directory (see playmates.sh);
+  2. configure playmate-splash.sh accordingly;
+  3. run `make install';
+  4. configure sysinit to run playmate-splash on startup (via
+     e.g. rc.local).
+
+Voilà: a new and titillating splash screen every startup!
+
+You might set your menu.lst (grub.conf) to contain something like
+this:
+
+  timeout=10
+  splashimage=(hd0,1)/grub/splash.xpm.gz
+
+according to your local setup, of course.
