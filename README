@@ -1,0 +1,8 @@
+These scripts make my grub splash screen much more interesting by
+sampling a random Hefnerian artifact at 640x480; but it can be used on
+an arbitrary directory of jpg-artifacts.
+
+The idea is that, after the artifact directory (see
+playmate-splash.sh) has been populated (see playmates.sh),
+$(PREFIX)/bin/playmate-splash will be run by sysinit; thus presenting
+a unique splash upon the next boot.
