@@ -7,3 +7,6 @@
   notate artifact with model and date metadata (possibly just filename?)
 * TODO does the annotation rob a color from the image
   if there is no pure black around? test it.
+* TODO coreutils >= 8
+  turns out we might need a configure script after all, since the
+  `mktemp --suffix' option was only introduced in coreutils 8.
