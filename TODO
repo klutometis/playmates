@@ -5,3 +5,5 @@
     just filename; sometimes it doesn't show up, though (too dark): a way
     to specify negative color?
   notate artifact with model and date metadata (possibly just filename?)
+* TODO does the annotation rob a color from the image
+  if there is no pure black around? test it.
